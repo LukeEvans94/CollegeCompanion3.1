@@ -2,11 +2,15 @@ package teamduke.collegecompanion;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import teamduke.collegecompanion.util.SystemUiHider;
 
@@ -154,4 +158,24 @@ public class StudentCardActivity extends Activity {
         mHideHandler.removeCallbacks(mHideRunnable);
         mHideHandler.postDelayed(mHideRunnable, delayMillis);
     }
+
+    public void getData()
+    {
+        EditText username = (EditText) findViewById(R.id.editTextUserName);
+
+        if (username.getText().toString().equals("255051"))
+        {
+          final TextView changeName = (TextView) findViewById(R.id.Name);
+            changeName.setText("Luke Evans");
+
+          final TextView changeDOB = (TextView) findViewById(R.id.DOB);
+            changeDOB.setText("19/10/1994");
+
+         final TextView changeStudentNumber = (TextView) findViewById(R.id.studentNumber);
+            changeStudentNumber.setText("255051");
+
+        }
+
+    }
 }
+

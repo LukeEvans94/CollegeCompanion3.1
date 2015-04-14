@@ -52,6 +52,7 @@
         />
 
     <TextView
+        android:id="@+id/Name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="aaaaaa aaaaaaa"
@@ -73,6 +74,7 @@
         android:layout_marginRight="20dp"/>
 
     <TextView
+        android:id="@+id/DOB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="00/00/0000"
@@ -92,6 +94,7 @@
         android:layout_marginRight="50dp"/>
 
     <TextView
+        android:id="@+id/studentNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="000000"

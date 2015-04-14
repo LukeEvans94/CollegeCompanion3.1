@@ -17,23 +17,11 @@ public class login extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        onStop();
-
-    }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-        {
-
-            EditText username = (EditText) findViewById(R.id.editTextUserName);
-            EditText password = (EditText) findViewById(R.id.editTextPassword);
-            username = null;
-            password = null;
-        }
 
 
     }
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

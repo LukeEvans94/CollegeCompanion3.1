@@ -17,6 +17,8 @@
     <string name="title_activity_library">Library</string>
     <string name="title_activity_registration">Registration</string>
     <string name="name">Name</string>
+    <string name="button_login">Log in</string>
+    <string name="Registration">Register</string>
 
 
     <string name="borrow_button_text">Borrow</string>

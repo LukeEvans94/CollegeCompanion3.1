@@ -3,6 +3,7 @@
     package="teamduke.collegecompanion" >
 
     <uses-permission android:name="android.permission.INTERNET" />
+
     <uses-feature android:name="android.hardware.camera" />
 
     <application
@@ -10,10 +11,22 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/MainTheme" >
+
+
+        <activity
+            android:name=".login"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -23,18 +36,17 @@
         <activity
             android:name=".MoodleActivity"
             android:label="@string/title_activity_moodle"
-            android:screenOrientation="portrait">
-
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name=".WebmailActivity"
             android:label="@string/title_activity_webmail"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name=".BuildingActivity"
             android:label="@string/title_activity_building"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name=".StudentCardActivity"
@@ -46,20 +58,18 @@
         <activity
             android:name=".LibraryActivity"
             android:label="@string/title_activity_library"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name=".RegistrationActivity"
             android:label="@string/title_activity_registration"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
         </activity>
-
-        <activity android:name=".BookActivity"
+        <activity
+            android:name=".BookActivity"
             android:label="Book Title"
-            android:screenOrientation="portrait">
-
+            android:screenOrientation="portrait" >
         </activity>
-
 
     </application>
 

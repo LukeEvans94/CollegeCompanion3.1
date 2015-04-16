@@ -2,15 +2,20 @@ package teamduke.collegecompanion;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.preference.PreferenceManager;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.jar.Attributes;
 
 import teamduke.collegecompanion.util.SystemUiHider;
 
@@ -22,6 +27,11 @@ import teamduke.collegecompanion.util.SystemUiHider;
  * @see SystemUiHider
  */
 public class StudentCardActivity extends Activity {
+
+        TextView name;
+        TextView DOB;
+        TextView studentNum;
+
     /**
      * Whether or not the system UI should be auto-hidden after
      * {@link #AUTO_HIDE_DELAY_MILLIS} milliseconds.
@@ -53,8 +63,65 @@ public class StudentCardActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_student_card);
+
+        name = (TextView) findViewById(R.id.Name);
+        DOB = (TextView)findViewById(R.id.Dob);
+        studentNum = (TextView) findViewById(R.id.studentNumber);
+
+        SharedPreferences data = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+        String username = data.getString("username", "THIS IS DEFAULT VALUE");
+
+        if (username.equals("255051")) {
+            name.setText("Luke Evans");
+            DOB.setText("19/10/1994");
+            studentNum.setText(username);
+        }
+
+        if (username.equals("282889"))
+        {
+            name.setText("Calvin Scott");
+            DOB.setText("19/09/1993");
+            studentNum.setText(username);
+
+        }
+
+        if (username.equals("290776"))
+        {
+            name.setText("Sajjadali Raza");
+            DOB.setText("22/05/1994");
+            studentNum.setText(username);
+
+        }
+
+        if (username.equals("290959"))
+        {
+            name.setText("Alistair Macpherson");
+            DOB.setText("09/01/1995");
+            studentNum.setText(username);
+
+        }
+
+        if (username.equals("284133"))
+        {
+            name.setText("Gary Plane");
+            DOB.setText("13/03/1983");
+            studentNum.setText(username);
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         final View controlsView = findViewById(R.id.fullscreen_content_controls);
         final View contentView = findViewById(R.id.fullscreen_content);
@@ -159,23 +226,10 @@ public class StudentCardActivity extends Activity {
         mHideHandler.postDelayed(mHideRunnable, delayMillis);
     }
 
-    public void getData()
-    {
-        EditText username = (EditText) findViewById(R.id.editTextUserName);
 
-        if (username.getText().toString().equals("255051"))
-        {
-          final TextView changeName = (TextView) findViewById(R.id.Name);
-            changeName.setText("Luke Evans");
 
-          final TextView changeDOB = (TextView) findViewById(R.id.DOB);
-            changeDOB.setText("19/10/1994");
 
-         final TextView changeStudentNumber = (TextView) findViewById(R.id.studentNumber);
-            changeStudentNumber.setText("255051");
 
-        }
 
-    }
 }
 

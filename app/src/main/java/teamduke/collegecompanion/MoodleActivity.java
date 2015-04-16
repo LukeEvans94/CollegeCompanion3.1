@@ -2,6 +2,7 @@ package teamduke.collegecompanion;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.webkit.WebView;
@@ -10,7 +11,8 @@ import android.widget.Toast;
 
 
 public class MoodleActivity extends Activity {
-
+    private Toolbar mToolbar;
+    private FragmentDrawer drawerFragment;
     private WebView moodleWebView;
 
     @Override

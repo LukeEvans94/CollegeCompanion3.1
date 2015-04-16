@@ -51,31 +51,27 @@ public class login extends Activity {
     }
 
 
-    public void Log_in(View view)
-    {
+    public void Log_in(View view) {
         EditText username = (EditText) findViewById(R.id.editTextUserName);
         EditText password = (EditText) findViewById(R.id.editTextPassword);
 
 
-        if   (username.getText().toString().equals("255051") && password.getText().toString().equals("password"))
-        {
+        if (username.getText().toString().equals("255051") && password.getText().toString().equals("password")) {
 
-                Intent getMainActivity = new Intent(this,MainActivity.class);
-                final int result = 1;
-                username.setText("255051");
-                getMainActivity.putExtra("MainActivity", "callingActivity");
-                SharedPreferences data = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
-                data.edit().putString("username", username.getText().toString()).commit();
-                startActivityForResult(getMainActivity, result);
-
+            Intent getMainActivity = new Intent(this, MainActivity.class);
+            final int result = 1;
+            username.setText("255051");
+            getMainActivity.putExtra("MainActivity", "callingActivity");
+            SharedPreferences data = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+            data.edit().putString("username", username.getText().toString()).commit();
+            startActivityForResult(getMainActivity, result);
 
 
-            }
+        }
 
-        if   (username.getText().toString().equals("282889") && password.getText().toString().equals("password"))
-        {
+        if (username.getText().toString().equals("282889") && password.getText().toString().equals("password")) {
 
-            Intent getMainActivity = new Intent(this,MainActivity.class);
+            Intent getMainActivity = new Intent(this, MainActivity.class);
             final int result = 1;
             username.setText("282889");
             getMainActivity.putExtra("MainActivity", "callingActivity");
@@ -84,12 +80,10 @@ public class login extends Activity {
             startActivityForResult(getMainActivity, result);
 
 
-
         }
-        if   (username.getText().toString().equals("284133") && password.getText().toString().equals("password"))
-        {
+        if (username.getText().toString().equals("284133") && password.getText().toString().equals("password")) {
 
-            Intent getMainActivity = new Intent(this,MainActivity.class);
+            Intent getMainActivity = new Intent(this, MainActivity.class);
             final int result = 1;
             username.setText("284133");
             getMainActivity.putExtra("MainActivity", "callingActivity");
@@ -98,26 +92,22 @@ public class login extends Activity {
             startActivityForResult(getMainActivity, result);
 
 
-
         }
-        if   (username.getText().toString().equals("290776") && password.getText().toString().equals("password"))
-        {
+        if (username.getText().toString().equals("290776") && password.getText().toString().equals("password")) {
 
-            Intent getMainActivity = new Intent(this,MainActivity.class);
+            Intent getMainActivity = new Intent(this, MainActivity.class);
             final int result = 1;
-            username.setText("29077");
+            username.setText("290776");
             getMainActivity.putExtra("MainActivity", "callingActivity");
             SharedPreferences data = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
             data.edit().putString("username", username.getText().toString()).commit();
             startActivityForResult(getMainActivity, result);
 
 
-
         }
-        if   (username.getText().toString().equals("290959") && password.getText().toString().equals("password"))
-        {
+        if (username.getText().toString().equals("290959") && password.getText().toString().equals("password")) {
 
-            Intent getMainActivity = new Intent(this,MainActivity.class);
+            Intent getMainActivity = new Intent(this, MainActivity.class);
             final int result = 1;
             username.setText("290959");
             getMainActivity.putExtra("MainActivity", "callingActivity");
@@ -126,16 +116,14 @@ public class login extends Activity {
             startActivityForResult(getMainActivity, result);
 
 
+        } else
 
-        }
+        {
+            Toast toast = Toast.makeText(this, "Incorrect please try again", Toast.LENGTH_SHORT);
+            toast.show();
 
-            else
-
-                {
-                    Toast toast = Toast.makeText(this,"Incorrect please try again",Toast.LENGTH_SHORT);
-                    toast.show();
-                }
         }
 
     }
+}
 

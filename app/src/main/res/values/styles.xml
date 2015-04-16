@@ -1,4 +1,13 @@
 <resources>
+
+    <style name="MainTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="colorPrimary">@color/theme_primary</item>
+        <item name="colorPrimaryDark">@color/theme_primary_dark</item>
+        <item name="colorAccent">@color/theme_accent</item>
+    </style>
+
     <style name="Card_Button_login">
         <item name="android:layout_width">50dp</item>
         <item name="android:layout_height">30dp</item>
@@ -131,6 +140,47 @@
 
     </style>
 
+        <style name="Card">
+
+            <item name="android:layout_width">match_parent</item>
+            <item name="android:layout_height">200dp</item>
+            <item name="android:layout_marginTop">14dp</item>
+            <item name="android:layout_marginLeft">5dp</item>
+            <item name="android:layout_marginRight">5dp</item>
+
+
+        </style>
+
+        <style name="CardPhoto">
+            <item name="android:layout_width">match_parent</item>
+            <item name="android:layout_height">match_parent</item>
+            <item name="android:tint">@color/photo_tint</item>
+            <item name="android:scaleType">centerCrop</item>
+
+        </style>
+
+        <style name="CardText">
+
+            <item name="android:layout_width">match_parent</item>
+            <item name="android:layout_height">match_parent</item>
+
+            <item name="android:textSize">28sp</item>
+            <item name="android:textColor">#fff</item>
+            <item name="android:gravity">bottom|right</item>
+            <item name="android:paddingLeft">16dp</item>
+            <item name="android:paddingBottom">8dp</item>
+            <item name="android:paddingRight">5dp</item>
+            <item name="android:onClick">showPhoto</item>
+            <item name="android:clickable">true</item>
+            <item name="android:focusable">true</item>
+            <item name="android:background">?android:selectableItemBackground</item>
+
+
+        </style>
+
+
+
+
     <!-- Backward-compatible version of ?android:attr/buttonBarStyle -->
     <style name="ButtonBar">
         <item name="android:paddingLeft">2dp</item>
@@ -142,8 +192,6 @@
 
     <!-- Backward-compatible version of ?android:attr/buttonBarButtonStyle -->
     <style name="ButtonBarButton" />
-
-
 
 
 

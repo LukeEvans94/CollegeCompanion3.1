@@ -9,6 +9,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.preference.PreferenceManager;
+import android.support.v7.widget.Toolbar;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.EditText;
@@ -28,9 +29,11 @@ import teamduke.collegecompanion.util.SystemUiHider;
  */
 public class StudentCardActivity extends Activity {
 
-        TextView name;
-        TextView DOB;
-        TextView studentNum;
+    private Toolbar mToolbar;
+    private FragmentDrawer drawerFragment;
+    TextView name;
+    TextView DOB;
+    TextView studentNum;
 
     /**
      * Whether or not the system UI should be auto-hidden after
@@ -109,19 +112,6 @@ public class StudentCardActivity extends Activity {
             studentNum.setText(username);
 
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         final View controlsView = findViewById(R.id.fullscreen_content_controls);
         final View contentView = findViewById(R.id.fullscreen_content);

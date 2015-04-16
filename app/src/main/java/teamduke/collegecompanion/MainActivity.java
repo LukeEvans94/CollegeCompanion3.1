@@ -11,25 +11,16 @@ import android.view.MenuItem;
 import android.view.View;
 
 
-public class MainActivity extends ActionBarActivity implements FragmentDrawer.FragmentDrawerListener
+public class MainActivity extends Activity
 {
-    private Toolbar mToolbar;
-    private FragmentDrawer drawerFragment;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mToolbar = (Toolbar) findViewById(R.id.toolbar);
 
-        setSupportActionBar(mToolbar);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
-
-       drawerFragment = (FragmentDrawer)
-        getSupportFragmentManager().findFragmentById(R.id.fragment_navigation_drawer);
-        drawerFragment.setUp(R.id.fragment_navigation_drawer, (DrawerLayout) findViewById(R.id.drawer_layout), mToolbar);
-        drawerFragment.setDrawerListener(this);
 
     }
 
@@ -104,10 +95,6 @@ public class MainActivity extends ActionBarActivity implements FragmentDrawer.Fr
         startActivityForResult(getStudentActivity, result);
     }
 
-    @Override
-    public void onDrawerItemSelected(View view, int position) {
-
-    }
 
 }
 

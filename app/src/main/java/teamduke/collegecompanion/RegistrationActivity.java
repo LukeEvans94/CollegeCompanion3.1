@@ -15,8 +15,7 @@ import android.widget.Toast;
 
 
 public class RegistrationActivity extends Activity {
-    private Toolbar mToolbar;
-    private FragmentDrawer drawerFragment;
+
     static final String SCAN = "com.google.zxing.client.android.SCAN";
 
     @Override

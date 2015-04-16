@@ -11,8 +11,7 @@ import android.widget.Toast;
 
 
 public class MoodleActivity extends Activity {
-    private Toolbar mToolbar;
-    private FragmentDrawer drawerFragment;
+
     private WebView moodleWebView;
 
     @Override

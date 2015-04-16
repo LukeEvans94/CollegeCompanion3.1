@@ -29,8 +29,7 @@ import teamduke.collegecompanion.util.SystemUiHider;
  */
 public class StudentCardActivity extends Activity {
 
-    private Toolbar mToolbar;
-    private FragmentDrawer drawerFragment;
+
     TextView name;
     TextView DOB;
     TextView studentNum;
